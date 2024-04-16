@@ -1,0 +1,26 @@
+name: ip-fetch
+base: core20
+version: '0.1.0'
+summary: See details of an ip address
+description: |
+  See the details of an ip address from the terminal and display the geolocation on a world map on the terminal.
+
+confinement: strict
+grade: stable
+contact: magicisyou@outlook.com
+license: MIT
+source-code: https://github.com/silentdusk/ip-fetch
+
+parts:
+  ip-fetch:
+    plugin: rust
+    source: https://github.com/silentdusk/ip-fetch.git
+    build-packages:
+      - pkg-config
+      - libssl-dev
+
+apps:
+  ip-fetch:
+    command: bin/ip-fetch
+    plugs:
+      - network

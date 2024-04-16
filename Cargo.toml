@@ -1,0 +1,18 @@
+[package]
+name = "ip-fetch"
+version = "0.1.0"
+description = "Get geographical location of an ip address or domain"
+authors = ["youaremagic"]
+license = "MIT"
+repository = "https://github.com/silentdusk/ip-fetch"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crossterm = "0.26.1"
+tui = "0.19.0"
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+clap = { version = "4.0", features = ["derive"] }
+serde_json = "1.0.96"
+serde = { version = "1.0.163", features = ["derive"] }
